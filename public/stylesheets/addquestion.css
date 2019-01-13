@@ -1,0 +1,160 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.canv {
+    width: 95%;
+    margin: 0 auto;
+    height: 555px;
+    background-color: #F5F5F5;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 5px 5px 2px #ccc;
+}
+
+.nav {
+    width: 20%;
+    float: left;
+    background-color: #F5F5F5;
+    height: 550px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 2px #ccc;
+    padding: 5% 0 0 5%;
+}
+
+.show-right {
+    width: 80%;
+    float: right;
+}
+
+.show-right .h1 {
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 3px 3px 3px #666;
+}
+
+botton {
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 40px;
+    box-shadow: 3px 3px 2px #ccc;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.show-block {
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 20px;
+    height: 450px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.show-block .hello {
+    padding-top: 200px;
+    display: none;
+}
+
+
+/* .show-block ul {
+    
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: skyblue;
+} */
+
+.show-block table {
+    width: 90%;
+    /* border: 1px solid skyblue; */
+    box-shadow: 3px 5p 2px #ccc;
+    margin: 0 auto;
+}
+
+.show-block table td {
+    /* border: 1px solid skyblue; */
+}
+
+ul li {
+    list-style: none;
+}
+
+.choose {
+    width: 95%;
+    height: 50px;
+    padding-left: 20px;
+}
+
+.choose .choose-box {
+    width: 45%;
+    height: 50px;
+    float: left;
+}
+
+.choose .choose-box p {
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.choose .choose-box lable {
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+
+.choose .choose-level {
+    width: 20%;
+    position: relative;
+    left: 60px;
+}
+
+.choose .choose-box lable input {
+    float: left;
+}
+
+.choose .choose-box lable span {
+    /* float: left; */
+}
+
+.table-responsive {
+    height: 350px;
+    /* width: 900px; */
+}
+
+#testIdShow {
+    width: 900px;
+    height: 420px;
+    overflow: auto;
+    display: none;
+    padding-left: 100px;
+}
+
+#testIdShow #pull-left strong {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#testIdShow #pull-left .rQ {
+    font-size: 16px;
+    line-height: 180%;
+}
+
+#testIdShow #pull-left .rOption span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+botton.logout a {
+    color: #fff;
+}

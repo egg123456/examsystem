@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    .container
+        h1.text-center 超级管理员
+        .row.bg-info
+            .col-md-2
+                .button-box.text-center
+                    button#queryAll.btn.btn-primary(style="width:100px;margin:20px;") 展示
+                    button#insert.btn.btn-warning(style="width:100px;margin:20px;") 插入
+                    button#order.btn.btn-warning(style="width:100px;margin:20px;") 排序
+                    button#filter.btn.btn-primary(style="width:100px;margin:20px;") 过滤
+                #condition
+                    input#text.hidden.form-control(type="text" placeholder="column range" style="margin:10px 0;")
+                    input#column.hidden.form-control(type="text" placeholder="排序/过滤：例如输入id down + tab 表示id降序排列" style="margin:10px 0;")
+            .col-md-10
+                table.table.table-striped
+                    thead 
+                        tr
+                    tbody 
+            
+    link(rel="stylesheet" href="/stylesheets/sss.css")
+    script(src="/javascripts/sss.js")
+

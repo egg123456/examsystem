@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= "在线考试系统"
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/exam.css')
+    script(src='/javascripts/jquery-3.2.1.js') 
+    script(src='/javascripts/test.js')
+    script(src='/javascripts/base.js')
+  body
+    .userInfo
+      ul
+        li
+          a.exit(href="/",style="padding:0 10px;color: blue;") 退出登录
+        li 欢迎使用在线考试系统
+        li
+          a#userName(href="/")
+        li 您好
+    div.container
+      p.h1.text-center 请选择试卷开始考试
+      div(style="margin: 100px auto;width: 268px")
+        select#sel
+          option(value="0") 选择试卷
+        br
+        btn.btn.btn-info#begintest 开始考试

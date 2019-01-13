@@ -1,0 +1,33 @@
+extend layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion2.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion3.css')
+    script(src="/javascripts/jquery-3.2.1.js")
+    //- script(src="/js/userGrade.js")
+    script(src="/javascripts/bootstrap.js") 
+    div.container   
+        div.collapse.navbar-collapse.bs-example-js-navbar-collapse
+            ul.nav.navbar-nav
+                li
+                    span.navbar-brand 成绩查询
+                li.dropdown
+                    a#drop1.dropdown-toggle(href="#",data-toggle="dropdown",role="button",aria-haspopup="true",aria-expanded="false") 按时间排序           
+                        span.caret
+                    ul.dropdown-menu(aria-labelledby="drop1")
+                        li
+                            a(href="#") 按时间升序
+                        li
+                            a(href="#") 按时间降序
+                li.dropdown
+                    a#drop2.dropdown-toggle(href="#",data-toggle="dropdown",role="button",aria-haspopup="true",aria-expanded="false") 按成绩排序           
+                        span.caret
+                    ul.dropdown-menu(aria-labelledby="drop2")
+                        li
+                            a(href="#") 按成绩升序
+                        li
+                            a(href="#") 按成绩降序
+            div.show-right 
+                ul#showGrade
+            

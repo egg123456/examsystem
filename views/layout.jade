@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= "在线考试系统"
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    script(src="/javascripts/jquery-3.2.1.js")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/base.js")
+  body
+    .userInfo
+      ul
+        li
+          a.exit(href="/",style="padding:0 10px;color: blue;") 退出登录
+        li 欢迎使用在线考试系统
+        li
+          a#userName(href="/userPage")
+        li 您好
+    block content

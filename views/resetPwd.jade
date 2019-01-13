@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion2.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion3.css')
+    script(src="/javascripts/jquery-3.2.1.js")
+    script(src="/javascripts/update.js")
+    script(src="/javascripts/bootstrap.js") 
+    div.container
+        h1.text-center 修改密码
+        div.form-group
+            label(for="username") 用户名:
+            input.form-control(type="text",id="username")
+        div.form-group
+            label(for="password") 请输入新密码:
+            input.form-control(type="password",id="password")
+        div.form-group
+            label(for="checkpassword") 请再次输入新密码:
+            input.form-control(type="password",id="checkpassword")
+        button.btn.btn-danger.btn-block#reset(data-toggle="modal",data-target=".bs-example-modal-lg") 确定
+        button.btn.btn-success.btn-block#cancle(data-toggle="modal",data-target=".bs-example-modal-lg") 取消
+        div.modal.fade.bs-example-modal-lg(tabindex="-1",role="dialog",aria-labelledby="myLargeModalLabel")
+            div.modal-dialog.modal-lg(role="document")
+                div.modal-content.text-center

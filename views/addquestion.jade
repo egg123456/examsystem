@@ -1,0 +1,150 @@
+extends ./layout.jade
+
+block content
+    link(rel='stylesheet', href='/stylesheets/addquestion.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion1.css')
+
+    script(src="/javascripts/addquestion.js")
+    div.canv
+        div.nav
+            botton.add.btn.btn-info(data-toggle="modal",data-target="#myModal") 试题添加
+            botton.list.btn.btn-info#show 试题列表
+            botton#pre-show.btn.btn-info 试卷列表
+            botton.btn.btn-info.logout
+                a 退出登录
+
+        div.show-right
+            h1.h1 管理员中心
+            div.show-block
+                div#testIdShow
+                    div#pull-left.pull-left
+                h2.hello 欢迎使用管理员系统,美好的一天从现在开始！
+                div.checkbox.choose
+                        div.choose-box.choose-level
+                            p 试卷难度选择
+                            lable
+                                input.test(type="checkbox",name="test",value="1")
+                                span 1
+                            lable
+                                input.test(type="checkbox",name="test",value="2")
+                                span 2
+                            lable
+                                input.test(type="checkbox",name="test",value="3")
+                                span 3
+                        div.choose-box.choose-type
+                            p 试卷类型选择
+                            select.op 
+                                option 请选择试题类型
+                                option html
+                                option css
+                                option js
+                            
+                        div.selectId(style="position:absolute;left:400px;top:5px;color:red;") 
+                        div.btn-box 
+                            button.btn.btn-info#show-shijuan(data-toggle="modal",data-target="#myModal2") 生成试卷
+                            button.list.btn.btn-info.change-show#show-list 刷新
+                            button.btn.btn-info#showChecked(data-toggle="modal",data-target="#myModal4") 预览选中题目
+                           
+                div.table-responsive
+                    table.table-hover.table
+                        thead
+                            tr.text-center
+                                th.text-center 选中
+                                th.text-center id
+                                th 题目
+                                th 类型
+                                th 正确答案
+                                th 难度等级
+                                th 选项
+                                th 加入时间
+                        tbody#showAll.autoScroll.mt50
+
+
+                    //- 先把试卷列表隐藏
+                div.table-responsive#showPaper
+                    table.table-hover.table
+                        thead
+                            tr
+                                th.text-center id
+                                th.text-center.testId 试卷题目
+                                th.text-center  生成时间
+                        tbody#paperList.autoScroll
+                    
+                            
+
+        
+    
+    
+    //- 模态框1：添加试题
+    div.modal.fade#myModal(tabindex="-1",role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close(type="button",data-dismiss="modal",aria-label="Close") &times;
+                    h4.modal-title 添加试题
+                div.modal-body
+                    div.login
+                        div.form-group 
+                            label(for="Class") 试题类型:
+                            input.form-control(type="text",placeholder="请输入类型：(例如：JavaScript)",id="Class")
+                            label(for="qLevel") 等级:
+                            input.form-control(type="text",placeholder="等级1-5,1为最难:(例如2)",id="qLevel")
+                        div.form-group 
+                            label(for="Question") 题目:
+                            textarea.form-control(type="text",id="Question")                            
+                        div.form-group 
+                            label(for="password") 答案：A:
+                            input.form-control(type="text",id="A",placeholder="请输入选项A的答案")
+                        div.form-group 
+                            label(for="password") 答案：B:
+                            input.form-control(type="text",id="B",placeholder="请输入选项B的答案")
+                        div.form-group 
+                            label(for="password") 答案：C:
+                            input.form-control(type="text",id="C",placeholder="请输入选项C的答案")
+                        div.form-group 
+                            label(for="password") 答案：D:
+                            input.form-control(type="text",id="D",placeholder="请输入选项D的答案")
+                        div.form-group 
+                            label(for="Answer") 标准答案:
+                            input.form-control(type="text",id="Answer",placeholder="请输入正确答案：（例如A或a)")
+                        //- button.btn.btn-success.btn-block#reg2 注册
+                div.modal-footer
+                    button.btn.btn-success(type="button",data-dismiss="modal") 取消
+                    button.btn.btn-primary#submit(type="button",data-dismiss="modal") 保存
+
+    div.modal.fade#myModal3(tabindex="-1",role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close(type="button",data-dismiss="modal",aria-label="Close") &times;
+                    h4.modal-title 添加成功
+             
+    
+    //- 模态框2：生成试卷
+    div.modal.fade#myModal2(tabindex="-1",role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close(type="button",data-dismiss="modal",aria-label="Close") &times;
+                    h4.modal-title 预览试卷
+                div.modal-body
+                    div.login
+                        div.form-group#paper
+                           
+                div.modal-footer
+                    button.btn.btn-success(type="button",data-dismiss="modal") 取消
+                    button.btn.btn-primary#savePaper(type="button",data-dismiss="modal") 保存
+
+
+     div.modal.fade#myModal4(tabindex="-1",role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close(type="button",data-dismiss="modal",aria-label="Close") &times;
+                    h4.modal-title 预览选中的试题
+                div.modal-body
+                    div.login
+                        div.form-group#IdChecked
+                div.modal-footer
+                           
+              

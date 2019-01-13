@@ -1,0 +1,27 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.userInfo {
+    position: absolute;
+    top: 5px;
+    right: 10%;
+    font-size: 14px;
+    font-weight: 26px;
+}
+
+.userInfo ul li {
+    list-style: none;
+    float: right;
+}
+
+.userInfo ul li a {
+    padding: 0 5px;
+    color: red;
+    text-decoration: none;
+}

@@ -1,0 +1,77 @@
+doctype html
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion2.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion3.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')    
+    link(rel='stylesheet', href='/stylesheets/HGstyle.css') 
+    script(src='/javascripts/jquery-3.2.1.js') 
+    script(src='/javascripts/hisGrade.js')
+  body
+    div.container.bg-info
+      h1 第#{id}套试卷
+        span(id="sendId" style="opacity:0") #{id}
+    div.container
+      div.row(style="margin-top:2%")
+        div.col-md-3
+            div.row.top
+              div.col-md-3 
+                a(class="btn btn-muted num") 01
+              div.col-md-3
+                a(class="btn btn-muted num") 02
+              div.col-md-3
+                a(class="btn btn-muted num") 03
+              div.col-md-3 
+                a(class="btn btn-muted num") 04
+            div.row.top
+              div.col-md-3 
+                a(class="btn btn-muted num") 05
+              div.col-md-3
+                a(class="btn btn-muted num") 06
+              div.col-md-3
+                a(class="btn btn-muted num") 07
+              div.col-md-3 
+                a(class="btn btn-muted num") 08
+            div.row.top
+              div.col-md-3 
+                a(class="btn btn-muted num") 09
+              div.col-md-3
+                a(class="btn btn-muted num") 10
+              div.col-md-3
+                a(class="btn btn-muted num") 11
+              div.col-md-3 
+                a(class="btn btn-muted num") 12
+            div.row.top
+              div.col-md-3 
+                a(class="btn btn-muted num") 13
+              div.col-md-3
+                a(class="btn btn-muted num") 14
+              div.col-md-3
+                a(class="btn btn-muted num") 15
+              div.col-md-3 
+                a(class="btn btn-muted num") 16
+            div.row.top
+              div.col-md-3 
+                a(class="btn btn-muted num") 17
+              div.col-md-3
+                a(class="btn btn-muted num") 18
+              div.col-md-3
+                a(class="btn btn-muted num") 19
+              div.col-md-3 
+                a(class="btn btn-muted num") 20
+        div.col-md-9
+          div(style="margin-top:3%")
+            
+            button(id="prev") 上一题
+            button(id="next") 下一题
+            
+            div.box
+              ol
+    div.bg
+      div.grade 
+        p#grade
+        a.btn(class="to1" href="/userPage") 个人中心
+        a.btn(class="to2" href="/users") 再考一次

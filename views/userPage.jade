@@ -1,0 +1,62 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion2.css')
+    link(rel='stylesheet', href='/stylesheets/addquestion3.css')
+    script(src="/javascripts/jquery-3.2.1.js")
+    script(src="/javascripts/userPage.js")
+    script(src="/javascripts/bootstrap.min.js") 
+    div.canv
+        div.nav
+            botton.add.btn.btn-info(data-toggle="modal",data-target="#myModal") 修改密码
+            botton.list.btn.btn-info#test 在线考试
+            botton#shijuan-show.btn.btn-info 题库预览
+            botton#pre-show.btn.btn-info 成绩查询
+
+        div.show-right
+            h1.h1 用户中心
+            div.show-block
+                h2.hello 欢迎来到&nbsp;&nbsp;&nbsp;&nbsp;你皮任你皮&nbsp;&nbsp;&nbsp;考试系统       
+                div#totest
+                    a(href="/test" )
+                        img(src="/images/timg.png" style="width:50%")
+                div#tograde
+                    table.table
+                        thead
+                            tr
+                                th #
+                                td(style="cursor: pointer;") 考生姓名
+                                td#uGrade(style="cursor: pointer;") 考生成绩
+                                    span#ugmark.glyphicon.glyphicon-arrow-down(style="color:red;")
+                                td#uTime(style="cursor: pointer;") 考试时间
+                                    span#utmark.glyphicon.glyphicon-arrow-down(style="color:red;")
+                                td 点击查看
+                        tbody#showGrade
+                            
+                                
+        
+    //- 模态框1：添加试题
+    div.modal.fade#myModal(tabindex="-1",role="dialog")
+        div.modal-dialog(role="document")
+            div.modal-content
+                div.modal-header
+                    button.close(type="button",data-dismiss="modal",aria-label="Close") &times;
+                    h4.modal-title 修改密码
+                div.modal-body
+                    div.login
+                        div.form-group
+                            label(for="password") 请输入新密码:
+                            input.form-control(type="password",id="password")
+                        div.form-group
+                            label(for="checkpassword") 请再次输入新密码:
+                            input.form-control(type="password",id="checkpassword")
+                        
+                div.modal-footer
+                    button.btn.btn-success#cancle(type="button",data-dismiss="modal") 取消
+                    button.btn.btn-primary#reset(type="button",data-dismiss="modal") 保存
+    //- 模态框2：查看历史试卷     
+    //- div.modal.fade#myModal2(tabindex="-1",role="dialog")   
+    //-     div.modal-dialog(role="document")
+    //-         div.modal-content
+    //-             div.show 123
